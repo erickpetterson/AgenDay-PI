@@ -20,124 +20,177 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/agenda.css" />
     <link rel="stylesheet" href="css/body.css" />
+    <link rel="stylesheet" href="css/alterar-senha.css">
+    <link rel="stylesheet" href="css/box.css">
 </head>
 
 <body>
-    <div>
-        <nav class="navbar navbar-light bg-light fixed-top">
-            <div class="container-fluid">
-                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <h3 class="offcanvas-title fw-bold text-center" id="offcanvasDarkNavbarLabel">
-                    AgenDay</h3>
-                <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
-                    id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                    <strong>Barbearia</strong>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownUser2"
-                    style="right: 10px; left: 90%;" data-popper-placement="top-end">
-                    <li><a class="dropdown-item fw-bold" href="config.html">Configurações</a></li>
-                    <li><a class="dropdown-item fw-bold" href="perfil.html">Perfil</a></li>
-                    <li><a class="dropdown-item fw-bold" href="alterar-senha.html">Alterar senha</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item fw-bold" href="#">Sair</a></li>
-                </ul>
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasDarkNavbar"
-                    aria-labelledby="offcanvasDarkNavbarLabel" style="width:20%">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">AgenDay</h5>
-                    </div>
-                    <div class="offcanvas-body ">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-0">
-                            <li class="nav-item " style="padding: 10px;">
-                                <a class="nav-link fw-bold" href="agenda.html">
-                                    <img src="img\1651909_calendar_christmas_date_icon.png" alt="" color="white"
-                                        width="24" height="27" class="d-inline-block align-text-top"
-                                        style="margin: 0px 10px 0px 0px;">
-                                    Agenda
-                                </a>
+    <header>
+        <div class="topo">
+            <div>
+                <nav class="navbar navbar-light bg-light fixed-top">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <h3 class="offcanvas-title fw-bold text-center" id="offcanvasDarkNavbarLabel">
+                            AgenDay</h3>
+                        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                            id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                class="rounded-circle me-2">
+                            <strong>Barbearia</strong>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownUser2"
+                            style="right: 10px; left: 90%;" data-popper-placement="top-end">
+                            <li><a class="dropdown-item fw-bold" href="config.html">Configurações</a></li>
+                            <li><a class="dropdown-item fw-bold" href="perfil.html">Perfil</a></li>
+                            <li><a class="dropdown-item fw-bold" href="alterar-senha.html">Alterar senha</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
                             </li>
-                            <li class="nav-item dropdown" style="padding: 10px;">
-                                <a class="nav-link dropdown-toggle fw-bold " href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="img\1651909_calendar_christmas_date_icon.png" alt="" color="white"
-                                        width="24" height="27" class="d-inline-block align-text-top"
-                                        style="margin: 0px 10px 0px 0px;">
-                                    Cadastrar
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-light">
-                                    <li><a class="dropdown-item fw-bold " style="padding: 2px; font-size: 14px;"
-                                            href="cad-cliente.html">Clientes</a>
-                                    </li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item fw-bold " style="padding: 2px; font-size: 14px;"
-                                            href="cad.servicos.html">Serviços</a>
-                                    </li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item fw-bold" style="padding: 2px; font-size: 14px;"
-                                            href="cad-funcionario.html">Funcionarios</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown" style="padding: 10px;">
-                                <a class="nav-link dropdown-toggle fw-bold" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="img\1651909_calendar_christmas_date_icon.png" alt="" color="white"
-                                        width="24" height="27" class="d-inline-block align-text-top"
-                                        style="margin: 0px 10px 0px 0px;">
-                                    Comandas
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-light ">
-                                    <li><a class="dropdown-item fw-bold" style="padding: 2px; font-size: 14px;"
-                                            href="comandas-abertas.html">Comandas</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item fw-bold" style="padding: 2px; font-size: 14px;"
-                                            href="historico-comandas.html">Historicos</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item" style="padding: 10px;">
-                                <a class="nav-link fw-bold" href="financeiro.html">
-                                    <img src="img\1651909_calendar_christmas_date_icon.png" alt="" color="white"
-                                        width="24" height="27" class="d-inline-block align-text-top"
-                                        style="margin: 0px 10px 0px 0px;">
-                                    Financeiro
-                                </a>
-                            </li>
+                            <li><a class="dropdown-item fw-bold" href="#">Sair</a></li>
                         </ul>
-                    </div>
-                    <div class="offcanvas-footer">
-                        <div class="navbar-nav text-center flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link fw-bold" aria-current="page" href="#">
-                                    <img src="img\1651909_calendar_christmas_date_icon.png" alt="" color="white"
-                                        width="24" height="27" class="d-inline-block align-text-top"
-                                        style="margin: 0px 10px 0px 0px;">
-                                    Sair
-                                </a>
-                            </li>
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasDarkNavbar"
+                            aria-labelledby="offcanvasDarkNavbarLabel" style="width:20%">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">AgenDay</h5>
+                            </div>
+                            <div class="offcanvas-body ">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-0">
+                                    <li class="nav-item " style="padding: 10px;">
+                                        <a class="nav-link fw-bold" href="agenda.html">
+                                            <img src="img\1651909_calendar_christmas_date_icon.png" alt="" color="white"
+                                                width="24" height="27" class="d-inline-block align-text-top"
+                                                style="margin: 0px 10px 0px 0px;">
+                                            Agenda
+                                        </a>
+                                    </li>
+                                    <li class="nav-item dropdown" style="padding: 10px;">
+                                        <a class="nav-link dropdown-toggle fw-bold " href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src="img\1651909_calendar_christmas_date_icon.png" alt="" color="white"
+                                                width="24" height="27" class="d-inline-block align-text-top"
+                                                style="margin: 0px 10px 0px 0px;">
+                                            Cadastrar
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-light">
+                                            <li><a class="dropdown-item fw-bold " style="padding: 2px; font-size: 14px;"
+                                                    href="cad-cliente.html">Clientes</a>
+                                            </li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item fw-bold " style="padding: 2px; font-size: 14px;"
+                                                    href="cad.servicos.html">Serviços</a>
+                                            </li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item fw-bold" style="padding: 2px; font-size: 14px;"
+                                                    href="cad-funcionario.html">Funcionarios</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown" style="padding: 10px;">
+                                        <a class="nav-link dropdown-toggle fw-bold" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src="img\1651909_calendar_christmas_date_icon.png" alt="" color="white"
+                                                width="24" height="27" class="d-inline-block align-text-top"
+                                                style="margin: 0px 10px 0px 0px;">
+                                            Comandas
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-light ">
+                                            <li><a class="dropdown-item fw-bold" style="padding: 2px; font-size: 14px;"
+                                                    href="comandas-abertas.html">Comandas</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item fw-bold" style="padding: 2px; font-size: 14px;"
+                                                    href="historico-comandas.html">Historicos</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item" style="padding: 10px;">
+                                        <a class="nav-link fw-bold" href="financeiro.html">
+                                            <img src="img\1651909_calendar_christmas_date_icon.png" alt="" color="white"
+                                                width="24" height="27" class="d-inline-block align-text-top"
+                                                style="margin: 0px 10px 0px 0px;">
+                                            Financeiro
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="offcanvas-footer">
+                                <div class="navbar-nav text-center flex-grow-1 pe-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link fw-bold" aria-current="page" href="#">
+                                            <img src="img\1651909_calendar_christmas_date_icon.png" alt="" color="white"
+                                                width="24" height="27" class="d-inline-block align-text-top"
+                                                style="margin: 0px 10px 0px 0px;">
+                                            Sair
+                                        </a>
+                                    </li>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="card box">
+            <div class="text-center">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs d-flex justify-content-evenly">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" aria-current="true" href="config.html">Empresa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" aria-current="true" href="perfil.html">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="true" href="alterar-senha.html">Alterar senha</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="container linha-top">
+                    </div>
+                    <div class="titulo-senha">
+                        <h5 class="card-title fw-bold fs-2">Alterar senha</h5>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Senha antiga">
+                        <label for="floatingPassword">Senha antiga</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Nova senha">
+                        <label for="floatingPassword">Nova senha</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Repetir senha">
+                        <label for="floatingPassword">Repetir senha</label>
+                    </div>
+                    <div class="form-floating">
+                        <a href="#" class="btn btn-primary botao-salvar">Salvar</a>
+                    </div>
+                    <div class="container linha-bottom">
                     </div>
                 </div>
             </div>
-        </nav>
-    </div>
-    
+        </div>
+    </main>
+    <footer>
+        <div class="rodape">
+
+        </div>
+    </footer>
     <section class="overlay"></section>
     <script src="js\menu-lateral.js"></script>
-
 </body>
 
 </html>
