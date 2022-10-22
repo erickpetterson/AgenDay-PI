@@ -1,0 +1,10 @@
+.box {
+    position: absolute;
+    width: 93%;
+    height: 85%;
+    left: 3.5%;
+    top: 10%;
+    background: #fdfdfd;
+    box-shadow: 2px 2px 3px 3px #d9d9d9;
+    border-radius: 10px;
+  }
